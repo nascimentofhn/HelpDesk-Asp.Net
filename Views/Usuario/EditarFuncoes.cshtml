@@ -1,0 +1,35 @@
+﻿@model HelpDeskTCC.ViewModels.UsuarioEditarFuncoesViewModel
+
+@{
+    ViewBag.Title = "EditarFuncoes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Funções do usuário: @Html.DisplayFor(model  => model.NomeCompleto)</h2>
+
+
+@using (Html.BeginForm("EditarFuncoes", "Usuario", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        @Html.HiddenFor(model => model.Id)
+        <h4>Selecione as funções</h4>
+        
+
+        <table>
+            <tr>
+                
+            </tr>
+
+            @Html.EditorFor(modelo => modelo.Funcoes)
+
+        </table>
+       
+        <br />
+        <div class="form-group">
+
+            <div class="col-md-1">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

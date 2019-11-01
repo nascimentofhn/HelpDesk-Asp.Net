@@ -1,0 +1,16 @@
+﻿@model HelpDeskTCC.ViewModels.UsuarioFuncaoViewModel
+@{
+    Layout = null;
+}
+
+@Html.HiddenFor(modelo => modelo.Id)
+@Html.HiddenFor(modelo => modelo.Nome)
+
+<tr>
+    <td>
+        @Html.EditorFor(modelo => modelo.Selecionado)
+    </td>
+    <td>
+        @Html.EditorFor(modelo => modelo.Nome)
+    </td>
+</tr>

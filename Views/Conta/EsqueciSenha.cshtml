@@ -1,0 +1,18 @@
+﻿@model HelpDeskTCC.ViewModels.ContaEsqueciSenhaViewModel
+@{
+    ViewBag.Title = "EsqueciSenha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Esqueci minha senha</h2>
+<p> Preecha o campo de email</p>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    @Html.EditorForModel()
+
+
+    <input type="submit" value="Enviar" />
+}
+
